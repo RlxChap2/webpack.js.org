@@ -4,7 +4,7 @@ sort: 22
 contributors:
   - RlxChap2
 related:
-  - title: Using Records
+  - title: "استخدام Records"
     url: https://survivejs.com/webpack/optimizing/separating-manifest/#using-records
 ---
 
@@ -12,7 +12,7 @@ related:
 
 W> نحتاج إلى مُساهَمات: لا تزال هذه الصفحة قيد الإنجاز. فإن كنت ضليعاً في أيّ من الخيارات التي بقي وصفها أو أمثلتها ناقصاً، فأنشئ Issue وقدِّم PR في [مستودع التوثيق](https://github.com/webpack/webpack.js.org)!
 
-## amd
+## ايه ام دي
 
 `object` `boolean: false`
 
@@ -35,7 +35,7 @@ export default {
 
 ويُتيح لك هذا الخيار أن تضبط المفتاح الذي تبحث عنه وحدتك على قيمة صادقة (truthy). وعلى أيّ حال، فإنّ دعم AMD في webpack يتجاهل الاسم المُعرَّف.
 
-## bail
+## الكفالة
 
 `boolean = false`
 
@@ -84,7 +84,7 @@ export default [
 ];
 ```
 
-## ignoreWarnings
+## تجاهل التحذيرات
 
 `[RegExp, function (WebpackError, Compilation) => boolean, {module?: RegExp, file?: RegExp, message?: RegExp}]`
 
@@ -146,7 +146,7 @@ export default function (source) {
 
 T> يمكنك تجاوز الخصائص في سياق الـ loader، لأنّ webpack ينسخ كلّ ما يُعرَّف في `loader` إلى سياق الـ loader.
 
-## name
+## اسم
 
 `string`
 
@@ -180,7 +180,7 @@ export default [
 ];
 ```
 
-## parallelism
+## التوازي
 
 `number = 100`
 
@@ -202,7 +202,7 @@ export default {
 - قلِّل `parallelism` حين تصطدم بُناك بحدود الذاكرة (كما في مُشغِّلات CI المُقيَّدة).
 - ارفعه حين تتوفّر لك معالجة وذاكرة كافيتان وتريد أن تُعظِّم إنتاجية البناء.
 
-## profile
+## الملف الشخصي
 
 `boolean`
 
@@ -219,7 +219,7 @@ export default {
 
 T> اجمع بين `profile: true` و `parallelism: 1` للحصول على أزمنة صحيحة. لاحظ أنّ هذا سيُبطئ البناء أيضاً.
 
-## recordsInputPath
+## RecordsInputPath
 
 `string`
 
@@ -243,7 +243,7 @@ export default {
 };
 ```
 
-## recordsOutputPath
+## RecordsOutputPath
 
 `string`
 
@@ -265,7 +265,7 @@ export default {
 };
 ```
 
-## recordsPath
+## RecordsPath
 
 `string`
 
@@ -292,7 +292,7 @@ T> لاحظ أنّه على الرغم من أنّ هذا الملفّ يُول�
 
 W> ضبط `recordsPath` يضبط عملياً كلاً من `recordsInputPath` و `recordsOutputPath` على المسار ذاته. وعادةً ما يكفيك هذا، إلا إن قرّرت تغيير اسم ملفّ السجلّات. انظر المثال أدناه.
 
-## snapshot
+## لقطة
 
 `object`
 
@@ -335,7 +335,7 @@ export default {
 };
 ```
 
-### buildDependencies
+### buildDependeency
 
 `object = { hash boolean = true, timestamp boolean = true }`
 
@@ -358,7 +358,7 @@ export default {
 
 تأكّد من تغليف المسار في مجموعة التقاط (capture group) إن استعملت تعابير نمطية.
 
-### managedPaths
+### ManagedPaths
 
 `(RegExp | string)[]`
 
@@ -382,7 +382,7 @@ export default {
 };
 ```
 
-### unmanagedPaths
+### مسارات غير مُدارة
 
 <Badge text="5.90.0+" />
 
@@ -419,7 +419,7 @@ export default {
 - `hash` — قارِن hashes المحتوى لتقرير الإبطال (أبهظ من `timestamp`، لكنه يتغيّر بوتيرة أقلّ).
 - `timestamp` — قارِن الطوابع الزمنية لتقرير الإبطال.
 
-### resolveBuildDependencies
+### ResolveBuildDependeency
 
 `object = {hash boolean = true, timestamp boolean = true}`
 
